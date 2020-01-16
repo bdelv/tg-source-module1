@@ -3,8 +3,8 @@ variable "size" {
   default = 10
 }
 
-# module 1 generates a random alphanumeric string
-resource "random_string" "rnd" {
+# module 1 generates a random alphabetical string
+resource "random_string" "rnd1" {
   special = false
   number = false
   upper = false
@@ -12,5 +12,5 @@ resource "random_string" "rnd" {
 }
 
 output "module1-output" {
-    value = "Module1: ${random_string.rnd.result}"
+    value = "Module1: ${random_string.rnd1.result}"
 }
